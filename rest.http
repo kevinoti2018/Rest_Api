@@ -1,0 +1,22 @@
+GET http://localhost:3003/products
+
+
+### create a product
+
+POST http://localhost:3003/products
+
+###get a product by id
+GET http://localhost:3003/products/id
+
+###patch a product by id
+
+PATCH http://localhost:3003/products/id
+
+###delete a product by id
+DELETE http://localhost:3003/products/id
+
+###
+GET http://localhost:3003/test?name=iMac&price=2399
+
+###
+GET http://localhost:3003/test/8745634
