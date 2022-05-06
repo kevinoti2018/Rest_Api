@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose')
 
-const app = express();
 
+const app = express();
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 mongoose.connect('mongodb://localhost:27017/RestApi',{
     useUnifiedTopology:true,
     useNewUrlParser:true
@@ -16,8 +18,8 @@ app.use('/products',ProductRoute)
 app.all('/test/:id',(req,res)=>{
 //    console.log(req.query)
 //     res.send(req.query);
-    console.log(req.params)
-    res.send(req.params)
+    console.log(req.req.body)
+    res.send(req.body)
 })
 app.use((req,res,next)=>{
    const err = new Error('not found')

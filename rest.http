@@ -1,19 +1,31 @@
-GET http://localhost:3003/products
+
+GET https://localhost:3003/products
 
 
 ### create a product
 
 POST http://localhost:3003/products
+Content-Type: application/json
 
+{
+    "name": "Apple watch Gps + cellular ",
+    "price": 699
+}
 ###get a product by id
-GET http://localhost:3003/products/id
+GET http://localhost:3003/products/627583dc369201e4564f716a
 
 ###patch a product by id
 
-PATCH http://localhost:3003/products/id
+PATCH http://localhost:3003/products/627583dc369201e4564f716a
+Content-Type: application/json
+
+{
+    "price" : 1799
+}
 
 ###delete a product by id
-DELETE http://localhost:3003/products/id
+DELETE http://localhost:3003/products/6273a40d456519ce7a4e2537
+
 
 ###
 GET http://localhost:3003/test?name=iMac&price=2399
